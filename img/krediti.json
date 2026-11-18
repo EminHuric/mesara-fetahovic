@@ -42,6 +42,13 @@
 "source": "https://commons.wikimedia.org/wiki/File:2001078_004_70_045_018ac_(22416228498).jpg"
 },
 {
+"file": "klanica",
+"title": "File:2001078 004 70 045 020ac (22821041862).jpg",
+"artist": "Texas State Archives from",
+"license": "No restrictions",
+"source": "https://commons.wikimedia.org/wiki/File:2001078_004_70_045_020ac_(22821041862).jpg"
+},
+{
 "file": "zrenje",
 "title": "File:Dry-aging beef.jpg",
 "artist": "Filipe Fortes from Unit",
@@ -119,6 +126,13 @@
 "source": "https://commons.wikimedia.org/wiki/File:Aging_meat.jpg"
 },
 {
+"file": "radnja",
+"title": "File:Turku Markthalle 04.JPG",
+"artist": "Hajotthu",
+"license": "CC BY-SA 3.0",
+"source": "https://commons.wikimedia.org/wiki/File:Turku_Markthalle_04.JPG"
+},
+{
 "file": "rostilj",
 "title": "File:Pljeskavica (5800860560).jpg",
 "artist": "erik forsberg from Helsing",
@@ -131,5 +145,12 @@
 "artist": "The original uploader was MCB<",
 "license": "CC BY-SA 2.5",
 "source": "https://commons.wikimedia.org/wiki/File:Rib-steak-raw-MCB.jpg"
+},
+{
+"file": "pasnjak2",
+"title": "File:Cattle grazing by the Idaho–Wyoming border near Geneva, Idaho.jpg",
+"artist": "Z3lvs",
+"license": "CC0",
+"source": "https://commons.wikimedia.org/wiki/File:Cattle_grazing_by_the_Idaho%E2%80%93Wyoming_border_near_Geneva,_Idaho.jpg"
 }
 ]

@@ -3,343 +3,504 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Mesara Fetahović · Kvalitet na jednom mestu</title>
-<meta name="description" content="Mesara Fetahović, Prijepolje: domaće meso iz sopstvenog tova i sopstvene klanice. Sveže meso, roštilj i suhomesnato. Kvalitet na jednom mestu.">
 <meta name="theme-color" content="#0e0c0a">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<title>Mesara Fetahović</title>
+<meta name="description" content="Mesara Fetahović, Prijepolje: domaća junetina iz sopstvenog tova, sopstvene klanice i sopstvene radnje. Sveže meso, roštilj i suhomesnato. Kvalitet na jednom mestu.">
 <meta property="og:title" content="Mesara Fetahović · Kvalitet na jednom mestu">
-<meta property="og:description" content="Domaće meso, uzgajano na našim prostorima. Prijepolje.">
+<meta property="og:description" content="Domaće meso iz sopstvenog tova i sopstvene klanice. Prijepolje.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="sr_RS">
-<meta property="og:image" content="img/og.jpg">
-<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..900&family=Fraunces:ital,opsz,wght@0,9..144,300..500;1,9..144,300..500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..600&display=swap">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ButcherShop","name":"Mesara Fetahović","slogan":"Kvalitet na jednom mestu","address":{"@type":"PostalAddress","addressLocality":"Prijepolje","addressCountry":"RS"}}
+{"@context":"https://schema.org","@type":"ButcherShop","name":"Mesara Fetahović","slogan":"Kvalitet na jednom mestu","address":{"@type":"PostalAddress","addressLocality":"Prijepolje","addressCountry":"RS"},"areaServed":"Prijepolje","priceRange":"RSD","servesCuisine":"Domaće meso"}
 </script>
 <style>
-/* Layout: dark smokehouse stage; engraved bulls open the page, short sections, one bone-paper contact sheet at the end. */
+/* Layout: one dark "smokehouse" stage. Full-bleed photo bands alternate with bone-coloured paper sheets (price tags, articles). */
 :root{
-  --coal:#0e0c0a; --char:#17130f; --ash:#2b241d;
-  --bone:#efe7d8; --smoke:#a99e8c;
-  --blood:#b8241c; --blood-hi:#d93a2b;
-  --ink:#1b1712; --ink-2:#5d5446;
+  --coal:#0e0c0a;      /* page ground, warm black */
+  --char:#17130f;      /* raised dark surface */
+  --ash:#2a241e;       /* hairlines on dark */
+  --bone:#efe7d8;      /* main ink on dark, paper colour */
+  --smoke:#a99e8c;     /* secondary text on dark */
+  --blood:#b8241c;     /* the one accent: oxblood red */
+  --blood-hi:#d93a2b;  /* accent hover */
+  --ink:#1b1712;       /* ink on bone paper */
+  --ink-2:#5d5446;     /* secondary ink on paper */
   --display:"Archivo",Impact,"Arial Narrow",system-ui,sans-serif;
   --serif:"Fraunces",Georgia,"Times New Roman",serif;
   --text:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-  --gl:max(16px,env(safe-area-inset-left,0px)); --gr:max(16px,env(safe-area-inset-right,0px));
+  --gut:max(16px,env(safe-area-inset-left,0px));
+  --gut-r:max(16px,env(safe-area-inset-right,0px));
+  --wrap:1240px;
   color-scheme:dark;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--coal);color:var(--bone);font-family:var(--text);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{margin:0;background:var(--coal);color:var(--bone);font-family:var(--text);font-size:17px;line-height:1.6;font-variation-settings:"wdth" 100;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 button{font:inherit;color:inherit}
 :focus-visible{outline:2px solid var(--blood-hi);outline-offset:3px}
-.wrap{max-width:1240px;margin:0 auto;padding-left:var(--gl);padding-right:var(--gr)}
-section{scroll-margin-top:76px}
-.eyebrow{font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--smoke);display:flex;align-items:center;gap:12px;margin:0}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--coal)}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gut);padding-right:var(--gut-r)}
+.eyebrow{font-family:var(--text);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--smoke);display:flex;align-items:center;gap:12px}
 .eyebrow::before{content:"";width:28px;height:2px;background:var(--blood)}
-h2{margin:18px 0 0;font-family:var(--display);font-variation-settings:"wdth" 112;font-weight:800;font-size:clamp(34px,5.4vw,68px);line-height:.98;letter-spacing:-.02em;text-transform:uppercase;text-wrap:balance}
-h2 em{font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.01em}
-.lede{font-size:clamp(17px,1.5vw,20px);line-height:1.6;color:var(--smoke);max-width:56ch;margin:22px 0 0}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--bone);background:transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s}
+h1,h2,h3{margin:0;text-wrap:balance;font-weight:800}
+h2{font-family:var(--display);font-variation-settings:"wdth" 112;font-size:clamp(34px,5.6vw,72px);line-height:.98;letter-spacing:-.02em;text-transform:uppercase}
+h2 em,.lede em{font-family:var(--serif);font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.01em;color:var(--bone)}
+.lede{font-size:clamp(18px,1.6vw,21px);line-height:1.55;color:var(--smoke);max-width:60ch}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;font-size:15px;letter-spacing:.04em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--bone);background:transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
 .btn:hover{background:var(--bone);color:var(--coal)}
 .btn--red{background:var(--blood);border-color:var(--blood);color:#fff}
 .btn--red:hover{background:var(--blood-hi);border-color:var(--blood-hi);color:#fff}
 .btn svg{width:18px;height:18px;flex:none}
 
-/* header + menu */
-.demo{background:var(--blood);color:#fff;font-size:12.5px;font-weight:600;text-align:center;padding:6px var(--gr) 6px var(--gl)}
-header.top{position:sticky;top:0;z-index:50;background:rgba(14,12,10,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--ash);padding-top:env(safe-area-inset-top,0px)}
-.top .wrap{display:flex;align-items:center;gap:20px;min-height:70px}
-.brand{display:flex;align-items:center;gap:12px;text-decoration:none;margin-right:auto;min-width:0}
-.brand svg{width:44px;height:44px;flex:none}
+/* ---------- demo ribbon + header ---------- */
+.demo{background:var(--blood);color:#fff;font-size:13px;font-weight:600;letter-spacing:.02em;text-align:center;padding-block:7px}
+.demo .wrap{display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(14,12,10,.82);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--ash)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand svg{width:46px;height:46px;flex:none}
 .brand b{display:block;font-family:var(--display);font-variation-settings:"wdth" 120;font-weight:800;font-size:17px;letter-spacing:.06em;line-height:1}
 .brand small{display:block;font-family:var(--serif);font-style:italic;font-size:13px;color:var(--smoke);line-height:1.3;margin-top:3px}
-nav.main{display:flex;gap:28px;font-size:13.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
-nav.main a{text-decoration:none;color:var(--smoke);padding-block:10px;transition:color .2s}
+nav.main{display:flex;gap:30px;font-size:14px;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
+nav.main a{text-decoration:none;color:var(--smoke);transition:color .2s;padding-block:8px}
 nav.main a:hover{color:var(--bone)}
 .top .call{min-height:44px;padding:0 18px;font-size:13px}
-.meni{display:none}
-.meni summary{list-style:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--ash);display:grid;place-items:center;cursor:pointer}
-.meni summary::-webkit-details-marker{display:none}
-.meni summary span,.meni summary span::before,.meni summary span::after{display:block;width:18px;height:2px;background:var(--bone);position:relative;transition:transform .25s,background .25s}
-.meni summary span::before,.meni summary span::after{content:"";position:absolute;left:0}
-.meni summary span::before{top:-6px}.meni summary span::after{top:6px}
-.meni[open] summary span{background:transparent}
-.meni[open] summary span::before{transform:translateY(6px) rotate(45deg)}
-.meni[open] summary span::after{transform:translateY(-6px) rotate(-45deg)}
-.meni nav{position:absolute;left:0;right:0;top:100%;background:var(--coal);border-bottom:1px solid var(--ash);padding:4px var(--gr) 22px var(--gl);display:grid}
-.meni nav a{font-family:var(--display);font-variation-settings:"wdth" 115;font-weight:800;font-size:26px;text-transform:uppercase;text-decoration:none;padding:14px 0;border-bottom:1px solid var(--ash)}
-@media (max-width:960px){nav.main{display:none}.meni{display:block}}
-@media (max-width:520px){.top .call span{display:none}.top .call{padding:0;width:46px}.brand small{display:none}.top .wrap{gap:10px}}
+@media (max-width:980px){nav.main{display:none}}
+@media (max-width:520px){.top .call span{display:none}.top .call{padding:0 14px}.brand small{display:none}}
 
-/* hero */
-.hero{position:relative;overflow:hidden;background:var(--coal);isolation:isolate;--bw:min(45vw,760px)}
-.hero::before{content:"";position:absolute;left:50%;top:0;width:min(1500px,170vw);height:min(900px,130vw);transform:translateX(-50%);background:radial-gradient(closest-side,rgba(78,50,30,.5),rgba(40,27,19,.22) 55%,transparent);z-index:-1}
-.stage{position:relative;height:calc(var(--bw)*.75 + 24px);margin-top:clamp(12px,3vw,40px)}
-.bik{position:absolute;bottom:0;width:var(--bw);height:auto;max-width:none;will-change:transform}
-.bik--l{right:50%;animation:jurisL 1.05s cubic-bezier(.55,0,.9,.35) .25s both,trzajL .7s cubic-bezier(.2,.8,.2,1) 1.3s both}
-.bik--d{left:50%;animation:jurisD 1.05s cubic-bezier(.55,0,.9,.35) .25s both,trzajD .7s cubic-bezier(.2,.8,.2,1) 1.3s both}
-@keyframes jurisL{from{transform:translateX(-90vw)}to{transform:none}}
-@keyframes jurisD{from{transform:translateX(90vw)}to{transform:none}}
-@keyframes trzajL{30%{transform:translateX(-2.4%) rotate(-1deg)}100%{transform:none}}
-@keyframes trzajD{30%{transform:translateX(2.4%) rotate(1deg)}100%{transform:none}}
-.potres{animation:potres .5s linear 1.3s both}
-@keyframes potres{15%{transform:translate(-8px,4px)}30%{transform:translate(7px,-4px)}45%{transform:translate(-5px,3px)}60%{transform:translate(3px,-2px)}80%{transform:translate(-2px,1px)}100%{transform:none}}
-.zemlja{position:absolute;left:0;right:0;bottom:0;height:2px;background:linear-gradient(90deg,transparent,rgba(239,231,216,.35) 20%,rgba(239,231,216,.35) 80%,transparent)}
-#prasina{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:2}
-.hero-copy{position:relative;text-align:center;padding-block:clamp(22px,3vw,40px) clamp(56px,7vw,96px)}
-.hero h1{margin:0;font-weight:900;text-transform:uppercase;line-height:.88}
-.hero h1 .m{display:block;font-family:var(--display);font-variation-settings:"wdth" 100;font-weight:700;font-size:clamp(15px,1.9vw,26px);letter-spacing:.42em;color:var(--blood-hi);margin-bottom:.5em;padding-left:.42em}
-.hero h1 .ime{display:inline-block;font-family:var(--display);font-variation-settings:"wdth" 125;font-size:clamp(44px,10.6vw,170px);letter-spacing:-.01em;color:var(--bone)}
-.hero .slogan{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(21px,2.8vw,38px);margin:16px 0 0}
-.hero .cta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}
-.anim .hero h1 .ime{opacity:0}
-.anim .hero h1 .ime.vidi{opacity:1;transition:opacity .6s ease}
-.hero h1 .m,.hero .slogan,.hero .cta{animation:dizi .9s ease-out both}
-.hero h1 .m{animation-delay:2.2s}.hero .slogan{animation-delay:2.5s}.hero .cta{animation-delay:2.7s}
-@keyframes dizi{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-.ponovi{position:absolute;right:var(--gr);top:12px;z-index:4;background:rgba(14,12,10,.6);border:1px solid var(--ash);color:var(--smoke);border-radius:999px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:8px 14px;cursor:pointer}
-.ponovi:hover{color:var(--bone)}
-@media (max-width:700px){.hero{--bw:68vw}.stage{margin-top:44px}}
-@media (prefers-reduced-motion:reduce){.bik--l,.bik--d,.potres,.hero h1 .m,.hero .slogan,.hero .cta{animation:none}}
+/* ---------- hero: the clash ---------- */
+.hero{position:relative;overflow:hidden;background:var(--coal);isolation:isolate}
+.hero::before{content:"";position:absolute;left:50%;top:0;width:min(1500px,160vw);height:min(900px,120vw);transform:translateX(-50%);background:radial-gradient(closest-side,rgba(74,48,30,.55),rgba(40,27,19,.25) 55%,transparent);z-index:-1;pointer-events:none}
+.hero .stage{position:relative;height:clamp(300px,46vw,620px);max-width:1680px;margin:0 auto}
+.hero .tlo{position:absolute;left:0;right:0;bottom:0;height:46%;background:url(img/tlo.jpg) center top/cover;opacity:.9;-webkit-mask-image:linear-gradient(to bottom,transparent,#000 40%,#000 70%,transparent);mask-image:linear-gradient(to bottom,transparent,#000 40%,#000 70%,transparent)}
+.bik{position:absolute;bottom:6%;height:86%;width:auto;max-width:none;filter:drop-shadow(0 30px 40px rgba(0,0,0,.6));will-change:transform}
+.bik--l{right:50%;transform-origin:100% 80%;animation:jurisL 1.05s cubic-bezier(.55,0,.9,.35) .25s both,trzajL .7s cubic-bezier(.2,.8,.2,1) 1.3s both}
+.bik--d{left:50%;transform-origin:0 80%;animation:jurisD 1.05s cubic-bezier(.55,0,.9,.35) .25s both,trzajD .7s cubic-bezier(.2,.8,.2,1) 1.3s both}
+@keyframes jurisL{from{transform:translateX(-85vw)}to{transform:translateX(0)}}
+@keyframes jurisD{from{transform:translateX(85vw)}to{transform:translateX(0)}}
+@keyframes trzajL{0%{transform:translateX(0)}30%{transform:translateX(-2.2%) rotate(-1deg)}100%{transform:translateX(0) rotate(0)}}
+@keyframes trzajD{0%{transform:translateX(0)}30%{transform:translateX(2.2%) rotate(1deg)}100%{transform:translateX(0) rotate(0)}}
+.hero .bljesak{position:absolute;left:50%;top:55%;width:70vmin;height:70vmin;transform:translate(-50%,-50%) scale(.2);border-radius:50%;background:radial-gradient(circle,rgba(255,236,210,.85) 0%,rgba(255,170,110,.25) 30%,transparent 65%);mix-blend-mode:screen;pointer-events:none;opacity:0;animation:bljesak .9s ease-out 1.28s both}
+@keyframes bljesak{0%{opacity:0;transform:translate(-50%,-50%) scale(.2)}12%{opacity:1}100%{opacity:0;transform:translate(-50%,-50%) scale(1.5)}}
+.hero canvas{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.hero .potres{animation:potres .5s linear 1.3s both}
+@keyframes potres{0%,100%{transform:none}15%{transform:translate(-9px,4px)}30%{transform:translate(8px,-5px)}45%{transform:translate(-6px,3px)}60%{transform:translate(4px,-2px)}80%{transform:translate(-2px,1px)}}
+.hero .vin{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to right,var(--coal),transparent 14%,transparent 86%,var(--coal)),linear-gradient(to bottom,var(--coal),transparent 18%,transparent 82%,var(--coal))}
+.hero-copy{position:relative;text-align:center;padding-block:0 clamp(48px,7vw,96px);margin-top:clamp(-70px,-4vw,-24px);z-index:3}
+.hero h1{font-family:var(--display);font-variation-settings:"wdth" 125;font-weight:900;text-transform:uppercase;line-height:.86;letter-spacing:-.01em;font-size:clamp(46px,10.4vw,168px);animation:udar .7s cubic-bezier(.2,1.4,.3,1) 1.32s both}
+.hero h1 span{display:block;font-variation-settings:"wdth" 125;color:var(--bone)}
+.hero h1 .ime{color:var(--bone)}
+.hero h1 .r{color:var(--blood)}
+@keyframes udar{0%{opacity:0;transform:scale(1.6);filter:blur(10px);letter-spacing:.2em}60%{opacity:1;filter:blur(0)}100%{opacity:1;transform:scale(1);letter-spacing:-.01em}}
+.hero .slogan{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(22px,3vw,40px);color:var(--bone);margin:14px 0 0;animation:dizi .9s ease-out 1.75s both}
+.hero .sub{margin:22px auto 0;max-width:56ch;color:var(--smoke);font-size:clamp(16px,1.4vw,19px);animation:dizi .9s ease-out 1.95s both}
+.hero .cta{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:32px;animation:dizi .9s ease-out 2.1s both}
+@keyframes dizi{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.ponovi{position:absolute;right:calc(var(--gut-r) + 4px);top:14px;z-index:4;background:rgba(14,12,10,.6);border:1px solid var(--ash);color:var(--smoke);border-radius:999px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:8px 14px;cursor:pointer}
+.ponovi:hover{color:var(--bone);border-color:var(--smoke)}
+@media (max-width:700px){
+  .hero .stage{height:clamp(260px,84vw,440px)}
+  .bik{height:94%;bottom:2%}
+  .hero-copy{margin-top:-8px}
+}
+@media (prefers-reduced-motion:reduce){
+  .bik--l,.bik--d,.hero .potres,.hero h1,.hero .slogan,.hero .sub,.hero .cta{animation:none}
+  .hero .bljesak{display:none}
+}
 
-/* about */
-.o-nama{padding-block:clamp(72px,10vw,130px);border-top:1px solid var(--ash)}
-.o-nama .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);align-items:center}
-.o-nama .wrap>*{min-width:0}
-.o-nama figure{margin:0}
-.o-nama figure img{width:100%;aspect-ratio:5/4;object-fit:cover;border-radius:4px}
-.potpis{display:flex;align-items:center;gap:14px;margin-top:30px}
-.potpis svg{width:52px;height:52px;flex:none}
-.potpis b{display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:21px}
+/* ---------- three claims ---------- */
+.tri{border-top:1px solid var(--ash);border-bottom:1px solid var(--ash);background:var(--char)}
+.tri ol{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:repeat(3,1fr)}
+.tri li{padding-block:34px;padding-inline:clamp(4px,2.4vw,36px);display:grid;grid-template-columns:auto 1fr;gap:6px 18px;align-items:baseline;border-left:1px solid var(--ash);min-width:0}
+.tri li:first-child{border-left:0;padding-left:0}
+.tri .n{grid-row:span 2;font-family:var(--serif);font-style:italic;font-size:42px;line-height:1;color:var(--blood)}
+.tri b{font-family:var(--display);font-variation-settings:"wdth" 115;font-weight:800;text-transform:uppercase;font-size:20px;letter-spacing:.02em;line-height:1.1}
+.tri span{color:var(--smoke);font-size:15px;line-height:1.5}
+@media (max-width:820px){.tri ol{grid-template-columns:1fr}.tri li{border-left:0;border-top:1px solid var(--ash);padding-left:0;padding-block:24px}.tri li:first-child{border-top:0}}
+
+/* ---------- manifest ---------- */
+.manifest{padding-block:clamp(72px,10vw,140px)}
+.manifest .grid{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(32px,6vw,96px);align-items:end}
+.manifest .grid>*{min-width:0}
+.manifest h2{margin-top:22px}
+.manifest .lede+.lede{margin-top:18px}
+.potpis{display:flex;align-items:center;gap:16px;margin-top:34px}
+.potpis .crta{flex:none;width:56px;height:56px;border-radius:50%;background:var(--blood);display:grid;place-items:center}
+.potpis .crta svg{width:34px;height:34px}
+.potpis b{display:block;font-family:var(--serif);font-style:italic;font-weight:400;font-size:22px}
 .potpis span{color:var(--smoke);font-size:14px}
-@media (max-width:820px){.o-nama .wrap{grid-template-columns:1fr}}
+.manifest figure{margin:0;position:relative}
+.manifest figure img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:4px;filter:saturate(.9) contrast(1.05)}
+.manifest figcaption{position:absolute;left:-1px;bottom:24px;background:var(--bone);color:var(--ink);padding:14px 18px;font-size:13px;font-weight:600;max-width:78%;line-height:1.4}
+.manifest figcaption b{display:block;font-family:var(--display);font-variation-settings:"wdth" 120;font-size:22px;font-weight:900;color:var(--blood);text-transform:uppercase;line-height:1}
+.nema{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px;padding:0;list-style:none}
+.nema li{border:1px solid var(--ash);border-radius:999px;padding:7px 14px 7px 12px;font-size:14px;color:var(--bone);display:flex;align-items:center;gap:8px}
+.nema li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--blood)}
+@media (max-width:860px){.manifest .grid{grid-template-columns:1fr}.manifest figure img{aspect-ratio:4/3}}
 
-/* products */
-.proizvodi{padding-block:clamp(72px,10vw,130px);background:var(--char);border-top:1px solid var(--ash);border-bottom:1px solid var(--ash)}
-.glava-sekcije{margin-bottom:clamp(28px,4vw,44px)}
-.mreza{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.8vw,22px)}
-@media (max-width:1060px){.mreza{grid-template-columns:repeat(2,minmax(0,1fr))}}
-.kartica{position:relative;display:flex;flex-direction:column;background:var(--coal);border:1px solid var(--ash);border-radius:6px;overflow:hidden;cursor:pointer;text-align:left;padding:0;transition:border-color .3s,transform .3s;min-width:0}
-.kartica:hover{border-color:#54483a;transform:translateY(-3px)}
+/* ---------- farm to counter ---------- */
+.put{padding-block:clamp(64px,9vw,120px);background:var(--char);border-top:1px solid var(--ash)}
+.put header{display:flex;justify-content:space-between;align-items:end;gap:28px;flex-wrap:wrap;margin-bottom:clamp(36px,5vw,64px)}
+.put header>div{min-width:0;max-width:760px}
+.put header h2{margin-top:18px}
+.koraci{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;counter-reset:k}
+.korak{position:relative;counter-increment:k;min-width:0}
+.korak .ph{position:relative;overflow:hidden;border-radius:4px;aspect-ratio:3/4;background:var(--ash)}
+.korak img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.7,.2,1);filter:grayscale(.15) contrast(1.04)}
+.korak:hover img{transform:scale(1.06)}
+.korak .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(14,12,10,.88),transparent 55%),linear-gradient(to bottom,rgba(14,12,10,.55),transparent 25%)}
+.korak .br{position:absolute;left:14px;top:12px;z-index:1;font-family:var(--serif);font-style:italic;font-size:15px;color:var(--bone)}
+.korak .br::before{content:counter(k,decimal-leading-zero) " · "}
+.korak h3{position:absolute;left:14px;right:14px;bottom:14px;z-index:1;font-family:var(--display);font-variation-settings:"wdth" 118;font-weight:800;font-size:20px;text-transform:uppercase;line-height:1.05}
+.korak p{margin:14px 0 0;color:var(--smoke);font-size:15px;line-height:1.55}
+@media (max-width:1060px){.koraci{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:minmax(240px,62%);overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-width:thin}.korak{scroll-snap-align:start}}
+.swipe{display:none;color:var(--smoke);font-size:13px;letter-spacing:.1em;text-transform:uppercase}
+@media (max-width:1060px){.swipe{display:block}}
+
+/* ---------- quote band ---------- */
+.citat{position:relative;isolation:isolate;padding-block:clamp(96px,14vw,200px);overflow:hidden;text-align:center}
+.citat img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(.7) brightness(.42)}
+.citat::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,var(--char),transparent 30%,transparent 70%,var(--coal))}
+.citat blockquote{margin:0 auto;max-width:18ch;font-family:var(--serif);font-weight:300;font-size:clamp(34px,5.4vw,76px);line-height:1.08;letter-spacing:-.015em}
+.citat blockquote b{font-weight:500;color:#fff;background:linear-gradient(transparent 62%,rgba(184,36,28,.85) 62%,rgba(184,36,28,.85) 92%,transparent 92%)}
+.citat cite{display:block;margin-top:28px;font-style:normal;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--smoke)}
+
+/* ---------- products ---------- */
+.proizvodi{padding-block:clamp(72px,10vw,130px)}
+.proizvodi header{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.proizvodi header>div{min-width:0}
+.proizvodi h2{margin-top:18px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:36px 0 30px}
+.chip{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--ash);background:transparent;font-size:14px;font-weight:600;letter-spacing:.04em;cursor:pointer;color:var(--smoke);transition:all .2s}
+.chip:hover{color:var(--bone);border-color:var(--smoke)}
+.chip[aria-pressed="true"]{background:var(--bone);color:var(--coal);border-color:var(--bone)}
+.mreza{display:grid;grid-template-columns:1fr;gap:clamp(14px,2vw,22px)}
+@media (min-width:640px){.mreza{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:1180px){.mreza{grid-template-columns:repeat(5,1fr)}.kartica h3{font-size:19px}}
+.kartica{position:relative;display:flex;flex-direction:column;background:var(--char);border:1px solid var(--ash);border-radius:6px;overflow:hidden;cursor:pointer;text-align:left;padding:0;transition:border-color .3s,transform .3s}
+.kartica:hover{border-color:#4a3f33;transform:translateY(-3px)}
 .kartica .ph{aspect-ratio:4/3;overflow:hidden;background:var(--ash)}
 .kartica .ph img{width:100%;height:100%;object-fit:cover;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
 .kartica:hover .ph img{transform:scale(1.06)}
-.kartica .tx{padding:16px 18px 18px;display:flex;flex-direction:column;gap:4px;flex:1}
+.kartica .tx{padding:18px 20px 20px;display:flex;flex-direction:column;gap:6px;flex:1}
 .kartica .kat{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke)}
-.kartica h3{margin:0;font-family:var(--display);font-variation-settings:"wdth" 110;font-weight:800;font-size:clamp(16px,1.6vw,20px);line-height:1.12;text-transform:uppercase}
-.cena{font-family:var(--display);font-weight:800;font-size:clamp(19px,1.8vw,23px);font-variant-numeric:tabular-nums;white-space:nowrap;margin-top:auto;padding-top:12px}
-.cena small{font-size:12.5px;font-weight:600;color:var(--smoke);margin-left:3px}
-.bedz{position:absolute;top:10px;left:10px;background:var(--bone);color:var(--ink);font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 9px;border-radius:3px}
-.sve-dugme{display:flex;justify-content:center;margin-top:clamp(28px,4vw,44px)}
-#svi{margin-top:clamp(48px,6vw,80px);padding-top:clamp(40px,5vw,64px);border-top:1px solid var(--ash)}
-#svi h3.nas{margin:0;font-family:var(--display);font-variation-settings:"wdth" 112;font-weight:800;font-size:clamp(24px,3vw,36px);text-transform:uppercase}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin:20px 0 26px}
-.chip{min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--ash);background:transparent;font-size:14px;font-weight:600;cursor:pointer;color:var(--smoke)}
-.chip:hover{color:var(--bone)}
-.chip[aria-pressed="true"]{background:var(--bone);color:var(--coal);border-color:var(--bone)}
-@media (max-width:520px){.kartica .tx{padding:12px 12px 14px}.kartica .kat{font-size:9.5px;letter-spacing:.12em}}
+.kartica h3{font-family:var(--display);font-variation-settings:"wdth" 110;font-weight:800;font-size:22px;line-height:1.1;text-transform:uppercase}
+.kartica p{margin:0;color:var(--smoke);font-size:14.5px;line-height:1.5}
+.kartica .dno{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-top:auto;padding-top:14px;border-top:1px dashed var(--ash)}
+.cena{font-family:var(--display);font-variation-settings:"wdth" 100;font-weight:800;font-size:24px;font-variant-numeric:tabular-nums;color:var(--bone);white-space:nowrap}
+.cena small{font-size:13px;font-weight:600;color:var(--smoke);margin-left:3px}
+.vise{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blood-hi);white-space:nowrap}
+.bedz{position:absolute;top:12px;left:12px;background:var(--bone);color:var(--ink);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:6px 10px;border-radius:3px}
+.bedz--r{background:var(--blood);color:#fff}
+.napomena{margin-top:22px;color:var(--smoke);font-size:13.5px}
 
-/* home-grown band */
-.domace{position:relative;isolation:isolate;overflow:hidden;padding-block:clamp(110px,15vw,210px)}
-.domace>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;filter:saturate(.75) brightness(.4)}
-.domace::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(to bottom,var(--char),transparent 28%,transparent 70%,var(--coal))}
-.domace h2{font-size:clamp(40px,7vw,104px);max-width:12ch}
-.domace .lede{color:var(--bone);opacity:.85}
-.tri{list-style:none;margin:clamp(36px,5vw,56px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:900px}
-.tri li{border:1px solid rgba(239,231,216,.22);border-radius:6px;padding:18px 20px;background:rgba(14,12,10,.45);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
-.tri b{display:block;font-family:var(--display);font-variation-settings:"wdth" 115;font-weight:800;text-transform:uppercase;font-size:17px;letter-spacing:.03em}
-.tri span{color:var(--smoke);font-size:14.5px}
-@media (max-width:700px){.tri{grid-template-columns:1fr}}
-
-/* gallery */
-.galerija{padding-block:clamp(72px,10vw,130px)}
-.zid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(80px,9.5vw,140px);gap:10px}
+/* ---------- gallery ---------- */
+.galerija{padding-block:clamp(64px,9vw,120px);background:var(--char);border-top:1px solid var(--ash);border-bottom:1px solid var(--ash)}
+.galerija header{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:36px}
+.galerija header>div{min-width:0}
+.galerija h2{margin-top:18px}
+.zid{display:grid;grid-template-columns:repeat(12,1fr);grid-auto-rows:clamp(90px,10vw,150px);gap:10px}
 .zid button{position:relative;padding:0;border:0;border-radius:4px;overflow:hidden;cursor:zoom-in;background:var(--ash);min-width:0}
-.zid img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
-.zid button:hover img{transform:scale(1.05)}
+.zid img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .4s;filter:saturate(.92)}
+.zid button:hover img{transform:scale(1.05);filter:saturate(1.05)}
+.zid button span{position:absolute;left:12px;bottom:10px;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#fff;text-shadow:0 1px 8px rgba(0,0,0,.7);opacity:0;transform:translateY(6px);transition:all .3s}
+.zid button:hover span,.zid button:focus-visible span{opacity:1;transform:none}
 .g1{grid-column:1/8;grid-row:1/4}.g2{grid-column:8/13;grid-row:1/3}.g3{grid-column:8/13;grid-row:3/4}
 .g4{grid-column:1/5;grid-row:4/6}.g5{grid-column:5/9;grid-row:4/6}.g6{grid-column:9/13;grid-row:4/8}
 .g7{grid-column:1/6;grid-row:6/8}.g8{grid-column:6/9;grid-row:6/8}
-@media (max-width:760px){.zid{grid-template-columns:repeat(2,1fr);grid-auto-rows:42vw;gap:8px}.zid button{grid-column:auto!important;grid-row:auto!important}.zid .g1,.zid .g6{grid-column:span 2!important}}
+@media (max-width:760px){.zid{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}.zid button{grid-column:auto!important;grid-row:auto!important}.zid .g1,.zid .g6{grid-column:span 2!important;grid-row:span 2!important}}
 
-/* contact */
-.kontakt{background:var(--bone);color:var(--ink)}
-.kontakt .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);padding-block:clamp(64px,9vw,120px)}
-.kontakt .wrap>*{min-width:0}
-.kontakt .eyebrow{color:var(--ink-2)}
-.kontakt h2 em{color:var(--blood)}
-.kontakt p{color:var(--ink-2);font-size:18px;max-width:44ch}
-.kontakt dl{margin:0;display:grid;grid-template-columns:auto 1fr}
-.kontakt dt,.kontakt dd{padding-block:15px;border-bottom:1px solid #d6cbb6;margin:0}
-.kontakt dt{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);padding-right:24px;padding-top:18px}
-.kontakt dd{font-weight:600;font-variant-numeric:tabular-nums;min-width:0}
-.kontakt .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
-.kontakt .btn{border-color:var(--ink);color:var(--ink)}
-.kontakt .btn:hover{background:var(--ink);color:var(--bone)}
-.kontakt .btn--red{color:#fff;border-color:var(--blood)}
-.kontakt .btn--red:hover{background:var(--blood-hi);color:#fff}
-@media (max-width:820px){.kontakt .wrap{grid-template-columns:1fr}}
-@media (max-width:420px){.kontakt .btns .btn{flex:1 1 100%}}
+/* ---------- blog ---------- */
+.blog{padding-block:clamp(72px,10vw,130px)}
+.blog header{margin-bottom:40px}
+.blog h2{margin-top:18px}
+.clanci{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:clamp(16px,2.4vw,32px)}
+.clanak{display:flex;flex-direction:column;gap:14px;background:none;border:0;padding:0;text-align:left;cursor:pointer;min-width:0}
+.clanak .ph{aspect-ratio:3/2;overflow:hidden;border-radius:4px;background:var(--ash)}
+.clanak:first-child .ph{aspect-ratio:4/3}
+.clanak img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+.clanak:hover img{transform:scale(1.05)}
+.clanak .meta{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--smoke)}
+.clanak h3{font-family:var(--serif);font-weight:400;font-size:clamp(22px,2vw,28px);line-height:1.18;letter-spacing:-.01em}
+.clanak:first-child h3{font-size:clamp(26px,2.6vw,36px)}
+.clanak p{margin:0;color:var(--smoke);font-size:15px}
+.clanak .vise{margin-top:4px}
+@media (max-width:900px){.clanci{grid-template-columns:1fr}}
 
-footer{padding-block:44px max(36px,env(safe-area-inset-bottom,0px));color:var(--smoke);font-size:13px}
-footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;align-items:center}
-footer details{font-size:12px;max-width:100%}
+/* ---------- visit ---------- */
+.poseta{background:var(--bone);color:var(--ink)}
+.poseta .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,6vw,90px);padding-block:clamp(64px,9vw,120px)}
+.poseta .wrap>*{min-width:0}
+.poseta .eyebrow{color:var(--ink-2)}
+.poseta h2{margin-top:18px;color:var(--ink)}
+.poseta h2 em{color:var(--blood)}
+.poseta p{color:var(--ink-2)}
+.poseta dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:0}
+.poseta dt,.poseta dd{padding-block:16px;border-bottom:1px solid #d6cbb6;margin:0}
+.poseta dt{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-2);padding-right:28px}
+.poseta dd{font-weight:600;font-variant-numeric:tabular-nums}
+.poseta dd a{color:var(--blood);text-decoration:none;border-bottom:1px solid currentColor}
+.poseta .btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.poseta .btn{border-color:var(--ink);color:var(--ink)}
+.poseta .btn:hover{background:var(--ink);color:var(--bone)}
+.poseta .btn--red{color:#fff;border-color:var(--blood)}
+.poseta .btn--red:hover{background:var(--blood-hi);border-color:var(--blood-hi);color:#fff}
+@media (max-width:860px){.poseta .wrap{grid-template-columns:1fr}}
+
+/* ---------- footer ---------- */
+footer{padding-block:56px 40px;color:var(--smoke);font-size:14px}
+footer .wrap{display:grid;gap:28px}
+footer .pecat{width:96px!important;height:96px!important}
+footer .red1{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer .sitno{border-top:1px solid var(--ash);padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:12.5px}
+footer details{font-size:12px;line-height:1.5}
 footer summary{cursor:pointer}
-footer ul{padding-left:18px;margin:10px 0 0}
-footer li{overflow-wrap:anywhere}
+footer details ul{padding-left:18px;margin:10px 0 0}
+footer details a{color:var(--smoke)}
 
-/* dialogs */
-dialog{border:0;padding:0;background:var(--char);color:var(--bone);border-radius:8px;width:min(980px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto;box-shadow:0 40px 120px rgba(0,0,0,.7)}
-dialog::backdrop{background:rgba(8,6,5,.84)}
-.x{position:sticky;top:0;display:flex;justify-content:flex-end;height:0;z-index:3}
-.x button{margin:10px;width:44px;height:44px;border-radius:50%;border:1px solid var(--ash);background:rgba(14,12,10,.85);cursor:pointer;font-size:22px;line-height:1}
+/* ---------- dialogs ---------- */
+dialog{border:0;padding:0;background:var(--char);color:var(--bone);border-radius:8px;width:min(1080px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow:auto;box-shadow:0 40px 120px rgba(0,0,0,.7)}
+dialog::backdrop{background:rgba(8,6,5,.82);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.zatvori{position:sticky;top:0;margin-left:auto;display:flex;justify-content:flex-end;z-index:3;height:0}
+.zatvori button{margin:12px;width:44px;height:44px;border-radius:50%;border:1px solid var(--ash);background:rgba(14,12,10,.8);cursor:pointer;font-size:22px;line-height:1;display:grid;place-items:center}
+.zatvori button:hover{border-color:var(--bone)}
 .det{display:grid;grid-template-columns:1.1fr .9fr}
 .det>*{min-width:0}
 .det .gal{position:relative;background:var(--coal)}
-.traka{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;height:100%}
-.traka::-webkit-scrollbar{display:none}
-.traka img{flex:0 0 100%;width:100%;aspect-ratio:1/1;height:100%;object-fit:cover;scroll-snap-align:start}
-.tacke{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:8px}
-.tacke button{width:10px;height:10px;border-radius:5px;border:0;padding:0;background:rgba(239,231,216,.45);cursor:pointer}
-.tacke button[aria-current="true"]{background:var(--bone);width:26px}
+.det .traka{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;height:100%}
+.det .traka::-webkit-scrollbar{display:none}
+.det .traka img{flex:0 0 100%;width:100%;aspect-ratio:1/1;height:100%;object-fit:cover;scroll-snap-align:start}
+.det .tacke{position:absolute;left:0;right:0;bottom:14px;display:flex;justify-content:center;gap:8px}
+.det .tacke button{width:10px;height:10px;border-radius:50%;border:0;padding:0;background:rgba(239,231,216,.45);cursor:pointer}
+.det .tacke button[aria-current="true"]{background:var(--bone);width:26px;border-radius:5px}
 .det .info{padding:clamp(24px,3.4vw,44px)}
-.det .kat{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke)}
-.det h3{margin:10px 0 0;font-family:var(--display);font-variation-settings:"wdth" 115;font-weight:900;font-size:clamp(28px,3.4vw,42px);line-height:1;text-transform:uppercase}
-.det .cena{display:block;font-size:34px;color:var(--blood-hi);padding-top:14px}
-.det p{color:var(--smoke);margin:14px 0 0}
-.det .btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
-.det .btns .btn{min-height:46px;padding:0 18px;font-size:13px}
-.det .tel{margin:14px 0 0;font-size:14px;color:var(--smoke)}
-@media (max-width:760px){.det{grid-template-columns:1fr}.traka img{aspect-ratio:4/3}}
+.det .info .kat{font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke)}
+.det h3{font-family:var(--display);font-variation-settings:"wdth" 115;font-weight:900;font-size:clamp(30px,3.4vw,44px);line-height:1;text-transform:uppercase;margin-top:12px}
+.det .cena{display:block;margin-top:18px;font-size:36px;color:var(--blood-hi)}
+.det .opis{color:var(--smoke);margin:16px 0 0}
+.det dl{display:grid;grid-template-columns:auto 1fr;margin:24px 0 0;font-size:15px}
+.det dt,.det dd{margin:0;padding-block:10px;border-top:1px solid var(--ash)}
+.det dt{color:var(--smoke);padding-right:20px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding-top:13px}
+.det .narudzba{margin-top:26px;padding:20px;border:1px solid var(--ash);border-radius:6px;background:var(--coal)}
+.det .narudzba b{display:block;font-size:15px}
+.det .narudzba p{margin:4px 0 14px;color:var(--smoke);font-size:14px}
+.det .narudzba .btns{display:flex;flex-wrap:wrap;gap:8px}
+.det .narudzba .btn{min-height:46px;padding:0 18px;font-size:13px}
+@media (max-width:820px){.det{grid-template-columns:1fr}.det .traka img{aspect-ratio:4/3}}
+.art{max-width:760px;margin:0 auto;padding:clamp(28px,5vw,64px) clamp(20px,5vw,64px) clamp(36px,5vw,64px)}
+.art .hero-img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;margin-bottom:28px}
+.art .meta{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--smoke)}
+.art h3{font-family:var(--serif);font-weight:400;font-size:clamp(30px,4vw,46px);line-height:1.1;letter-spacing:-.015em;margin:12px 0 22px}
+.art h4{font-family:var(--display);font-variation-settings:"wdth" 112;font-size:18px;font-weight:800;text-transform:uppercase;letter-spacing:.03em;margin:30px 0 8px}
+.art p,.art li{color:#d8cfbf;font-size:17px;line-height:1.7}
+.art ul{padding-left:20px}
 .lb{background:transparent;box-shadow:none;width:min(1400px,calc(100vw - 24px))}
-.lb img{width:100%;max-height:calc(100dvh - 40px);object-fit:contain;border-radius:4px}
+.lb img{width:100%;max-height:calc(100dvh - 90px);object-fit:contain;border-radius:4px}
+.lb p{text-align:center;color:var(--smoke);font-size:14px;margin:12px 0 0}
 </style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
-  <symbol id="glava" viewBox="0 0 100 100">
-    <path d="M35.5 37C24 37.5 12 31 8 12C14 23 23 27.5 37 27Z"/>
-    <path d="M64.5 37C76 37.5 88 31 92 12C86 23 77 27.5 63 27Z"/>
-    <path d="M34.5 41C27 39.5 20 42 16 47C23 49.5 29.5 49 35.5 46.5Z"/>
-    <path d="M65.5 41C73 39.5 80 42 84 47C77 49.5 70.5 49 64.5 46.5Z"/>
-    <path fill-rule="evenodd" d="M33 29.5Q41 26.5 46.5 28.5L50 33L53.5 28.5Q59 26.5 67 29.5L66 47Q64.5 60 61 71Q58 83 50 84Q42 83 39 71Q35.5 60 34 47Z M39.5 49L46 51.5L40 53Z M60.5 49L54 51.5L60 53Z M43.6 76.5a2 2.4 0 1 0 4 0a2 2.4 0 1 0 -4 0Z M52.4 76.5a2 2.4 0 1 0 4 0a2 2.4 0 1 0 -4 0Z"/>
-  </symbol>
-  <symbol id="logo" viewBox="0 0 120 120"><circle cx="60" cy="60" r="59" fill="#b8241c"/><circle cx="60" cy="60" r="53" fill="none" stroke="#efe7d8" stroke-width="1.6"/><use href="#glava" x="18" y="16" width="84" height="84" fill="#efe7d8"/></symbol>
-  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
-  <symbol id="i-msg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></symbol>
-  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
-</defs></svg>
 
-<div class="demo"><b>Demo verzija</b> · fotografije, cene i kontakt su privremeni</div>
+
+<!-- ============ SVG sprite: brand mark + icons ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="glava" viewBox="0 0 100 100">
+      <path d="M35.5 37C24 37.5 12 31 8 12C14 23 23 27.5 37 27Z"/>
+      <path d="M64.5 37C76 37.5 88 31 92 12C86 23 77 27.5 63 27Z"/>
+      <path d="M34.5 41C27 39.5 20 42 16 47C23 49.5 29.5 49 35.5 46.5Z"/>
+      <path d="M65.5 41C73 39.5 80 42 84 47C77 49.5 70.5 49 64.5 46.5Z"/>
+      <path fill-rule="evenodd" d="M33 29.5Q41 26.5 46.5 28.5L50 33L53.5 28.5Q59 26.5 67 29.5L66 47Q64.5 60 61 71Q58 83 50 84Q42 83 39 71Q35.5 60 34 47Z M39.5 49L46 51.5L40 53Z M60.5 49L54 51.5L60 53Z M43.6 76.5a2 2.4 0 1 0 4 0a2 2.4 0 1 0 -4 0Z M52.4 76.5a2 2.4 0 1 0 4 0a2 2.4 0 1 0 -4 0Z"/>
+    </symbol>
+    <path id="krug" d="M60 60m-45 0a45 45 0 1 1 90 0a45 45 0 1 1 -90 0"/>
+    <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></symbol>
+    <symbol id="i-msg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.6-5.2A8.5 8.5 0 1 1 21 11.5z"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/></symbol>
+  </defs>
+</svg>
+
+<div class="demo"><div class="wrap"><span><b>Demo verzija</b> · fotografije, cene i kontakt su privremeni</span></div></div>
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#pocetak" aria-label="Mesara Fetahović, početak"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>FETAHOVIĆ</b><small>mesara · Prijepolje</small></span></a>
+    <a class="brand" href="#pocetak" aria-label="Mesara Fetahović, početak">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="59" fill="var(--blood)"/><circle cx="60" cy="60" r="53" fill="none" stroke="var(--bone)" stroke-width="1.6"/><use href="#glava" x="18" y="16" width="84" height="84" fill="var(--bone)"/></svg>
+      <span><b>FETAHOVIĆ</b><small>mesara · Prijepolje</small></span>
+    </a>
     <nav class="main" aria-label="Glavni meni">
-      <a href="#o-nama">O nama</a><a href="#proizvodi">Proizvodi</a><a href="#domace">Domaće</a><a href="#galerija">Galerija</a><a href="#kontakt">Kontakt</a>
+      <a href="#prica">Naša priča</a>
+      <a href="#put">Od farme do pulta</a>
+      <a href="#proizvodi">Proizvodi</a>
+      <a href="#galerija">Galerija</a>
+      <a href="#blog">Saveti</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
-    <a class="btn btn--red call" href="#kontakt" aria-label="Naruči meso"><svg aria-hidden="true"><use href="#i-tel"/></svg><span>Naruči meso</span></a>
-    <details class="meni" id="meni">
-      <summary aria-label="Meni"><span></span></summary>
-      <nav aria-label="Meni za telefon">
-        <a href="#o-nama">O nama</a><a href="#proizvodi">Proizvodi</a><a href="#domace">Domaće</a><a href="#galerija">Galerija</a><a href="#kontakt">Kontakt</a>
-      </nav>
-    </details>
+    <a class="btn btn--red call" href="#kontakt"><svg aria-hidden="true"><use href="#i-tel"/></svg><span>Naruči meso</span></a>
   </div>
 </header>
 
 <main id="pocetak">
+<!-- ============ HERO ============ -->
 <section class="hero" aria-label="Mesara Fetahović">
   <button class="ponovi" type="button" id="ponovi">↻ Ponovi</button>
-  <canvas id="prasina" aria-hidden="true"></canvas>
-  <div class="potres">
+  <div class="potres" id="scena">
     <div class="stage">
-      <img class="bik bik--l" src="img/bik-levi.webp" width="959" height="720" alt="" aria-hidden="true">
-      <img class="bik bik--d" src="img/bik-desni.webp" width="938" height="720" alt="" aria-hidden="true">
-      <div class="zemlja" aria-hidden="true"></div>
+      <div class="tlo" aria-hidden="true"></div>
+      <img class="bik bik--l" src="img/bik-levi.webp" width="911" height="684" alt="" aria-hidden="true">
+      <img class="bik bik--d" src="img/bik-desni.webp" width="891" height="684" alt="" aria-hidden="true">
+      <div class="bljesak" aria-hidden="true"></div>
+      <canvas id="prasina" aria-hidden="true"></canvas>
+      <div class="vin" aria-hidden="true"></div>
     </div>
   </div>
   <div class="hero-copy wrap">
-    <h1><span class="m">Mesara</span><span class="ime" id="ime">Fetahović</span></h1>
+    <h1><span class="r" style="font-size:.34em;letter-spacing:.32em;font-variation-settings:'wdth' 100;font-weight:700;margin-bottom:.25em">Mesara</span><span class="ime">Fetahović</span></h1>
     <p class="slogan">Kvalitet na jednom mestu.</p>
-    <div class="cta"><a class="btn btn--red" href="#proizvodi">Pogledaj ponudu</a><a class="btn" href="#kontakt">Kontakt</a></div>
+    <p class="sub">Junad iz našeg tova, klanje u našoj klanici, rasecanje i prodaja u našoj radnji. Domaće meso iz Prijepolja, bez uvoza i bez posrednika.</p>
+    <div class="cta">
+      <a class="btn btn--red" href="#proizvodi">Pogledaj ponudu</a>
+      <a class="btn" href="#put">Kako radimo</a>
+    </div>
   </div>
 </section>
 
-<section class="o-nama" id="o-nama">
-  <div class="wrap">
+<!-- ============ THREE CLAIMS ============ -->
+<section class="tri" aria-label="Zašto mi">
+  <ol class="wrap">
+    <li><span class="n">01</span><b>Sopstveni tov</b><span>Junad odrastaju na našoj farmi, na senu i žitu sa naših njiva.</span></li>
+    <li><span class="n">02</span><b>Sopstvena klanica</b><span>Klanje i hlađenje u registrovanom objektu, pod veterinarskom kontrolom.</span></li>
+    <li><span class="n">03</span><b>Sopstvena radnja</b><span>Sa farme pravo na pult. Znamo poreklo svakog komada koji prodamo.</span></li>
+  </ol>
+</section>
+
+<!-- ============ MANIFEST ============ -->
+<section class="manifest" id="prica">
+  <div class="wrap grid">
     <div>
-      <p class="eyebrow">O nama</p>
-      <h2>Porodična mesara <em>iz Prijepolja.</em></h2>
-      <p class="lede">Junad tovimo sami, koljemo u svojoj klanici i prodajemo u svojoj radnji. Zato znamo poreklo svakog komada koji vam pružimo preko pulta.</p>
-      <div class="potpis"><svg aria-hidden="true"><use href="#logo"/></svg><span><b>Porodica Fetahović</b><span>od farme do vašeg stola</span></span></div>
-    </div>
-    <figure><img src="img/stala.webp" width="1500" height="994" loading="lazy" alt="Domaćin hrani stoku u štali"></figure>
-  </div>
-</section>
-
-<section class="proizvodi" id="proizvodi">
-  <div class="wrap">
-    <div class="glava-sekcije"><p class="eyebrow">Proizvodi</p><h2>Izdvajamo <em>iz radnje.</em></h2></div>
-    <div class="mreza" id="izdvojeno"></div>
-    <div class="sve-dugme"><button class="btn" type="button" id="sve-btn" aria-expanded="false" aria-controls="svi">Svi proizvodi</button></div>
-    <div id="svi" hidden>
-      <h3 class="nas">Svi proizvodi</h3>
-      <div class="chips" role="group" aria-label="Kategorije">
-        <button class="chip" type="button" data-k="sve" aria-pressed="true">Sve</button>
-        <button class="chip" type="button" data-k="sveze" aria-pressed="false">Sveže meso</button>
-        <button class="chip" type="button" data-k="rostilj" aria-pressed="false">Roštilj</button>
-        <button class="chip" type="button" data-k="suho" aria-pressed="false">Suhomesnato</button>
+      <p class="eyebrow">Naša priča</p>
+      <h2>Domaće meso, <em>ne iz uvoza.</em></h2>
+      <p class="lede" style="margin-top:26px">Na pultu većine radnji danas stoji meso za koje niko ne zna odakle je stiglo, koliko je putovalo i koliko je puta bilo zamrznuto. Kod nas je drugačije.</p>
+      <p class="lede">Svako grlo koje prodamo odgajili smo sami, na našim prostorima, na domaćoj hrani. Sami ga koljemo, sami ga rasecamo i sami vam ga pružamo preko pulta. Zato možemo da garantujemo kvalitet, a vi tačno znate šta jedete.</p>
+      <ul class="nema" aria-label="Šta ne radimo">
+        <li>Bez uvoznog mesa</li>
+        <li>Bez smrzavanja</li>
+        <li>Bez posrednika</li>
+        <li>Poreklo svakog komada</li>
+      </ul>
+      <div class="potpis">
+        <span class="crta"><svg aria-hidden="true"><use href="#glava" fill="var(--bone)"/></svg></span>
+        <span><b>Porodica Fetahović</b><span>domaćinska mesara iz Prijepolja</span></span>
       </div>
-      <div class="mreza" id="sve"></div>
     </div>
+    <figure>
+      <img src="img/stala.webp" width="1500" height="994" loading="lazy" alt="Domaćin hrani stoku u štali">
+      <figcaption><b>Od tova do stola</b>Sve na jednom mestu, u rukama jedne porodice.</figcaption>
+    </figure>
   </div>
 </section>
 
-<section class="domace" id="domace">
+<!-- ============ FARM TO COUNTER ============ -->
+<section class="put" id="put">
+  <div class="wrap">
+    <header>
+      <div>
+        <p class="eyebrow">Od farme do pulta</p>
+        <h2>Pet koraka. <em>Sve naše ruke.</em></h2>
+      </div>
+      <p class="lede" style="max-width:42ch">Kvalitet mesa se ne pravi u radnji. Pravi se mesecima ranije, na farmi. Ovako izgleda put svakog komada.</p>
+    </header>
+    <ol class="koraci">
+      <li class="korak"><div class="ph"><img src="img/pasnjak2.webp" loading="lazy" alt="Junad na pašnjaku" width="900" height="1200"><span class="br">Farma</span><h3>Tov na pašnjaku</h3></div><p>Junad odrastaju na otvorenom, bez žurbe. Sporiji rast znači čvršće meso i bolji ukus.</p></li>
+      <li class="korak"><div class="ph"><img src="img/seno.webp" loading="lazy" alt="Seno spremljeno za zimu" width="900" height="1200"><span class="br">Štala</span><h3>Domaća hrana</h3></div><p>Seno, kukuruz i žitarice sa naših njiva. Znamo šta je svako grlo jelo.</p></li>
+      <li class="korak"><div class="ph"><img src="img/klanica.webp" loading="lazy" alt="Klanica i hladnjača" width="900" height="1200"><span class="br">Klanica</span><h3>Klanje i hlađenje</h3></div><p>Registrovan objekat, veterinarski pregled i hladni lanac od prvog minuta.</p></li>
+      <li class="korak"><div class="ph"><img src="img/rasecanje.webp" loading="lazy" alt="Mesar raseca junetinu" width="900" height="1200"><span class="br">Rasecanje</span><h3>Majstorski rez</h3></div><p>Meso odstoji i zri, pa ga rasecamo ručno, komad po komad, po vašoj meri.</p></li>
+      <li class="korak"><div class="ph"><img src="img/radnja.webp" loading="lazy" alt="Pult mesare sa svežim mesom" width="900" height="1200"><span class="br">Radnja</span><h3>Na vašem stolu</h3></div><p>Sveže na pultu svakog jutra. Pitajte nas za savet, rado ćemo vam preporučiti komad.</p></li>
+    </ol>
+    <p class="swipe" aria-hidden="true">← Prevucite →</p>
+  </div>
+</section>
+
+<!-- ============ QUOTE ============ -->
+<section class="citat" aria-label="Naše obećanje">
   <img src="img/pasnjak.webp" alt="" loading="lazy" width="1500" height="844">
   <div class="wrap">
-    <p class="eyebrow">Domaće</p>
-    <h2>Uzgajano na <em>našim prostorima.</em></h2>
-    <p class="lede">Ne prodajemo meso iz uvoza. Prodajemo ono što smo sami odgajili, na domaćoj hrani, najboljim kvalitetom.</p>
-    <ul class="tri">
-      <li><b>Sopstveni tov</b><span>Junad sa naše farme</span></li>
-      <li><b>Sopstvena klanica</b><span>Pod veterinarskom kontrolom</span></li>
-      <li><b>Sopstvena radnja</b><span>Sa farme pravo na pult</span></li>
-    </ul>
+    <blockquote>Ne prodajemo meso iz uvoza. Prodajemo <b>ono što smo sami odgajili.</b></blockquote>
+    <cite>Porodica Fetahović</cite>
   </div>
 </section>
 
+<!-- ============ PRODUCTS ============ -->
+<section class="proizvodi" id="proizvodi">
+  <div class="wrap">
+    <header>
+      <div>
+        <p class="eyebrow">Ponuda</p>
+        <h2>Iz naše <em>radnje.</em></h2>
+      </div>
+      <p class="lede" style="max-width:40ch">Sveže meso, roštilj iz sopstvene proizvodnje i suhomesnato iz naše pušnice. Kliknite na proizvod za detalje.</p>
+    </header>
+    <div class="chips" role="group" aria-label="Filter kategorija">
+      <button class="chip" type="button" data-k="sve" aria-pressed="true">Sve</button>
+      <button class="chip" type="button" data-k="sveze" aria-pressed="false">Sveže meso</button>
+      <button class="chip" type="button" data-k="rostilj" aria-pressed="false">Roštilj program</button>
+      <button class="chip" type="button" data-k="suho" aria-pressed="false">Suhomesnato</button>
+    </div>
+    <div class="mreza" id="mreza"></div>
+    <p class="napomena">Cene su sa PDV-om, po kilogramu. Meso po porudžbini pripremamo i pakujemo za preuzimanje u radnji.</p>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
 <section class="galerija" id="galerija">
   <div class="wrap">
-    <div class="glava-sekcije"><p class="eyebrow">Galerija</p><h2>Pogledajte <em>kako radimo.</em></h2></div>
+    <header>
+      <div>
+        <p class="eyebrow">Galerija</p>
+        <h2>Pogledajte <em>kako radimo.</em></h2>
+      </div>
+      <p class="lede" style="max-width:40ch">Farma, klanica, pušnica i radnja. Bez filtera i bez kataloških fotografija.</p>
+    </header>
     <div class="zid" id="zid"></div>
   </div>
 </section>
 
-<section class="kontakt" id="kontakt">
+<!-- ============ BLOG ============ -->
+<section class="blog" id="blog">
+  <div class="wrap">
+    <header>
+      <p class="eyebrow">Saveti iz mesare</p>
+      <h2>Znanje <em>sa pulta.</em></h2>
+    </header>
+    <div class="clanci" id="clanci"></div>
+  </div>
+</section>
+
+<!-- ============ VISIT ============ -->
+<section class="poseta" id="kontakt">
   <div class="wrap">
     <div>
-      <p class="eyebrow">Kontakt</p>
-      <h2>Posetite nas <em>u Prijepolju.</em></h2>
-      <p style="margin-top:20px">Naručite telefonom, Viberom ili WhatsApp-om, a meso će vas čekati isečeno i spakovano.</p>
+      <p class="eyebrow">Posetite nas</p>
+      <h2>Radnja u <em>Prijepolju.</em></h2>
+      <p style="margin-top:22px;font-size:18px;max-width:46ch">Naručite telefonom, Viberom ili WhatsApp-om, a mi ćemo vam meso iseći i spakovati da vas čeka. Za veće porudžbine (slave, svadbe, roštilj za društvo) javite se dan-dva ranije.</p>
       <div class="btns">
         <a class="btn btn--red" href="tel:+38160000000"><svg aria-hidden="true"><use href="#i-tel"/></svg>Pozovi</a>
         <a class="btn" href="https://wa.me/38160000000?text=Zdravo%2C%20%C5%BEelim%20da%20naru%C4%8Dim%20meso" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-msg"/></svg>WhatsApp</a>
-        <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Mesara%20Fetahovi%C4%87%20Prijepolje" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Mapa</a>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Mesara%20Fetahovi%C4%87%20Prijepolje" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Mapa</a>
       </div>
     </div>
     <dl>
-      <dt>Telefon</dt><dd>+381 60 000 0000</dd>
+      <dt>Telefon</dt><dd>+381 60 000 0000 <span style="color:var(--ink-2);font-weight:500">(Viber, WhatsApp)</span></dd>
       <dt>Adresa</dt><dd>Prijepolje, Srbija</dd>
-      <dt>Pon – Sub</dt><dd>07:00 – 20:00</dd>
+      <dt>Pon – Pet</dt><dd>07:00 – 20:00</dd>
+      <dt>Subota</dt><dd>07:00 – 18:00</dd>
       <dt>Nedelja</dt><dd>07:00 – 13:00</dd>
+      <dt>Instagram</dt><dd><a href="https://www.instagram.com/" target="_blank" rel="noopener">@mesarafetahovic</a></dd>
     </dl>
   </div>
 </section>
@@ -347,112 +508,141 @@ dialog::backdrop{background:rgba(8,6,5,.84)}
 
 <footer>
   <div class="wrap">
-    <span>© 2026 Mesara Fetahović · Kvalitet na jednom mestu</span>
-    <details><summary>Fotografije u demo verziji</summary><ul id="krediti"></ul></details>
+    <div class="red1">
+      <a class="brand" href="#pocetak">
+        <svg class="pecat" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="59" fill="var(--blood)"/><circle cx="60" cy="60" r="55.5" fill="none" stroke="var(--bone)" stroke-width=".8"/><circle cx="60" cy="60" r="36" fill="none" stroke="var(--bone)" stroke-width=".8"/><text fill="var(--bone)" font-size="8.6" font-weight="800" style="font-family:var(--display);font-variation-settings:'wdth' 112"><textPath href="#krug" textLength="279" lengthAdjust="spacing">MESARA FETAHOVIĆ ✦ PRIJEPOLJE ✦ DOMAĆE ✦</textPath></text><use href="#glava" x="31" y="29" width="58" height="58" fill="var(--bone)"/></svg>
+        <span><b>FETAHOVIĆ</b><small>Kvalitet na jednom mestu.</small></span>
+      </a>
+      <span>Sopstveni tov · Sopstvena klanica · Sopstvena radnja</span>
+    </div>
+    <div class="sitno">
+      <span>© 2026 Mesara Fetahović, Prijepolje · PIB i MB: dopuniti</span>
+      <details>
+        <summary>Fotografije u demo verziji</summary>
+        <ul id="krediti"></ul>
+      </details>
+    </div>
   </div>
 </footer>
 
-<dialog id="dlg-p" aria-label="Proizvod"><div class="x"><button type="button" data-x aria-label="Zatvori">×</button></div><div id="dlg-p-telo"></div></dialog>
-<dialog id="dlg-g" class="lb" aria-label="Fotografija"><div class="x"><button type="button" data-x aria-label="Zatvori">×</button></div><img id="lb-img" src="" alt=""></dialog>
+<!-- dialogs -->
+<dialog id="dlg-p" aria-label="Detalji proizvoda"><div class="zatvori"><button type="button" data-zatvori aria-label="Zatvori">×</button></div><div id="dlg-p-telo"></div></dialog>
+<dialog id="dlg-a" aria-label="Članak"><div class="zatvori"><button type="button" data-zatvori aria-label="Zatvori">×</button></div><div id="dlg-a-telo"></div></dialog>
+<dialog id="dlg-g" class="lb" aria-label="Fotografija"><div class="zatvori"><button type="button" data-zatvori aria-label="Zatvori">×</button></div><img id="lb-img" src="" alt=""><p id="lb-cap"></p></dialog>
 
 <script>
 (function(){
 "use strict";
-var TEL="+381 60 000 0000",RAW="38160000000";
+var TEL="+381 60 000 0000", TELRAW="38160000000";
 var P=[
- {k:"sveze",kn:"Sveže meso",n:"Juneći but",c:1390,img:["p-but","p-rebra"],s:"Krto meso bez kostiju, za pečenje, dinstanje i šnicle.",top:1,b:"Najprodavanije"},
- {k:"rostilj",kn:"Roštilj",n:"Domaći ćevapi",c:1290,img:["p-cevapi","rostilj"],s:"Od junetine iz našeg tova, po porodičnom receptu.",top:1,b:"Kućni recept"},
- {k:"sveze",kn:"Sveže meso",n:"Juneći antrikot",c:2490,img:["p-ribeye","zrenje"],s:"Mramorirani komad za sočne stekove.",top:1},
- {k:"suho",kn:"Suhomesnato",n:"Goveđa pršuta",c:3490,img:["p-prsuta","pusnica"],s:"Sušena i dimljena bukovim drvetom, polako.",top:1,b:"Iz pušnice"},
- {k:"sveze",kn:"Sveže meso",n:"Juneći ramstek",c:2290,img:["p-ramstek","zrenje"],s:"Mekan i sočan, za biftek i stekove."},
- {k:"sveze",kn:"Sveže meso",n:"Juneća rebra",c:990,img:["p-rebra","hladnjaca"],s:"Za čorbe i sporo kuvanje."},
- {k:"sveze",kn:"Sveže meso",n:"Mleveno juneće",c:1190,img:["p-mleveno"],s:"Mlevemo isti dan, od komada koji izaberete."},
- {k:"rostilj",kn:"Roštilj",n:"Pljeskavica",c:1290,img:["p-pljeskavica","rostilj"],s:"Ručno pravljena svakog jutra."},
- {k:"rostilj",kn:"Roštilj",n:"Domaća kobasica",c:1190,img:["p-kobasica","pusnica"],s:"Sveža ili dimljena, sa paprikom iz kraja."},
- {k:"suho",kn:"Suhomesnato",n:"Goveđi sudžuk",c:1890,img:["p-sudzuk","pusnica"],s:"Dimljen i sušen u našoj pušnici."}
+ {id:"juneci-but",k:"sveze",kn:"Sveže meso",n:"Juneći but",c:1390,j:"kg",b:"Najprodavanije",img:["p-but","p-rebra","rasecanje"],s:"Krto meso bez kostiju, za pečenje, dinstanje i šnicle.",o:"But je najsvestraniji komad junetine. Od njega se seku šnicle za pohovanje i prirodne šnicle, a u komadu je idealan za sporo pečenje. Rasecamo ga po vašoj želji.",sas:"100 % juneće meso",cu:"0 – 4 °C",rok:"3 dana od pakovanja",pri:"Pečenje, dinstanje, šnicle"},
+ {id:"juneci-ramstek",k:"sveze",kn:"Sveže meso",n:"Juneći ramstek",c:2290,j:"kg",img:["p-ramstek","p-ribeye","zrenje"],s:"Sočan i mekan, za biftek i stekove na tiganju ili roštilju.",o:"Ramstek je mekani deo leđa sa tankim slojem masti koji pri pečenju daje sok i ukus. Meso pre prodaje odstoji i zri u našoj hladnjači.",sas:"100 % juneće meso",cu:"0 – 4 °C",rok:"4 dana od pakovanja",pri:"Stek, biftek, roštilj"},
+ {id:"juneci-antrikot",k:"sveze",kn:"Sveže meso",n:"Juneći antrikot",c:2490,j:"kg",b:"Zreli",img:["p-ribeye","zrenje","p-ramstek"],s:"Mramorirani komad sa kosti ili bez nje, za ozbiljne stekove.",o:"Antrikot ima najviše mramoriranosti, pa je najsočniji komad za stek. Na zahtev ga sečemo debljine koju želite.",sas:"100 % juneće meso",cu:"0 – 4 °C",rok:"4 dana od pakovanja",pri:"Stek na jakoj vatri"},
+ {id:"juneca-rebra",k:"sveze",kn:"Sveže meso",n:"Juneća rebra",c:990,j:"kg",img:["p-rebra","p-but","hladnjaca"],s:"Za čorbe, sporo kuvanje i pečenje u rerni.",o:"Rebra daju najbolji ukus čorbama i jelima koja se dugo krčkaju. Meso se posle sporog kuvanja samo odvaja od kosti.",sas:"100 % juneće meso s kostima",cu:"0 – 4 °C",rok:"3 dana od pakovanja",pri:"Čorba, sporo pečenje"},
+ {id:"mleveno-juneće",k:"sveze",kn:"Sveže meso",n:"Mleveno juneće meso",c:1190,j:"kg",img:["p-mleveno","p-but"],s:"Mlevemo isti dan, od komada koje sami izaberete.",o:"Meso meljemo pred vama ili ujutru, isti dan kada ga prodajemo. Odnos mesa i masnoće prilagodimo jelu koje spremate.",sas:"100 % juneće meso",cu:"0 – 4 °C",rok:"1 dan od mlevenja",pri:"Sarma, musaka, punjene paprike"},
+ {id:"cevapi",k:"rostilj",kn:"Roštilj program",n:"Domaći ćevapi",c:1290,j:"kg",b:"Kućni recept",img:["p-cevapi","rostilj"],s:"Od junetine iz našeg tova, po porodičnom receptu.",o:"Ćevape pravimo od junetine iz našeg tova, po porodičnom receptu, bez punila. Spremni su za roštilj ili tiganj.",sas:"Juneće meso, so, začini (tačan sastav potvrđuje klijent)",cu:"0 – 4 °C",rok:"2 dana od pravljenja",pri:"Roštilj, tiganj"},
+ {id:"pljeskavica",k:"rostilj",kn:"Roštilj program",n:"Pljeskavica",c:1290,j:"kg",img:["p-pljeskavica","rostilj"],s:"Debela, sočna, pravljena ručno svakog jutra.",o:"Pljeskavice oblikujemo ručno svakog jutra. Po porudžbini pravimo i punjene i gurmanske.",sas:"Juneće meso, crni luk, so, začini (potvrđuje klijent)",cu:"0 – 4 °C",rok:"2 dana od pravljenja",pri:"Roštilj, tiganj"},
+ {id:"domaca-kobasica",k:"rostilj",kn:"Roštilj program",n:"Domaća kobasica",c:1190,j:"kg",img:["p-kobasica","pusnica"],s:"Sveža ili dimljena, sa paprikom iz kraja.",o:"Kobasice punimo u prirodna creva. Sveže su za roštilj, a dimljene odstoje u našoj pušnici.",sas:"Meso, slanina, so, aleva paprika, beli luk (potvrđuje klijent)",cu:"0 – 4 °C",rok:"5 dana",pri:"Roštilj, pečenje, pasulj"},
+ {id:"goveda-prsuta",k:"suho",kn:"Suhomesnato",n:"Goveđa pršuta",c:3490,j:"kg",b:"Iz pušnice",bR:1,img:["p-prsuta","pusnica"],s:"Sušena i dimljena na tradicionalan način, polako i strpljivo.",o:"Goveđu pršutu solimo, sušimo i dimimo bukovim drvetom nekoliko nedelja. Seče se tanko, na listiće.",sas:"Goveđe meso, morska so",cu:"Suvo i hladno mesto",rok:"Do 60 dana",pri:"Meze, doručak"},
+ {id:"sudzuk",k:"suho",kn:"Suhomesnato",n:"Goveđi sudžuk",c:1890,j:"kg",img:["p-sudzuk","pusnica"],s:"Ljut ili blag, dimljen i sušen u našoj pušnici.",o:"Sudžuk pravimo od junetine i loja, sa belim lukom i začinima, pa ga sušimo i dimimo dok ne dobije pravu čvrstinu.",sas:"Juneće meso, loj, so, beli luk, začini (potvrđuje klijent)",cu:"Suvo i hladno mesto",rok:"Do 45 dana",pri:"Meze, jaja, pasulj"}
 ];
-var G=[["pasnjak","Pašnjak"],["hladnjaca","Hladnjača"],["p-cevapi","Ćevapi"],["stala","Štala"],["p-prsuta","Goveđa pršuta"],["pusnica","Pušnica"],["rasecanje","Rasecanje"],["seno","Seno"]];
-function cena(v){return String(v).replace(/\B(?=(\d{3})+(?!\d))/g,".")}
+var G=[
+ ["pasnjak","Pašnjak",1],["hladnjaca","Hladnjača",2],["p-cevapi","Ćevapi",3],["stala","Štala",4],["p-prsuta","Goveđa pršuta",5],["pusnica","Pušnica",6],["rasecanje","Rasecanje",7],["seno","Seno za zimu",8]
+];
+var A=[
+ {img:"zrenje",m:"Vodič · 4 min čitanja",t:"Kako prepoznati domaću junetinu na pultu",s:"Boja, mast, miris i čvrstina: četiri stvari koje odmah otkrivaju odakle je meso.",
+  b:"<p>Kada kupujete junetinu, ne morate da verujete na reč. Dovoljno je da znate šta da gledate.</p><h4>1. Boja</h4><p>Sveža domaća junetina je tamnocrvena, ponekad skoro bordo. Previše jarka, ružičasta boja često znači mlado tele ili meso koje je dugo stajalo u zaštitnoj atmosferi.</p><h4>2. Masnoća</h4><p>Mast kod junadi hranjenih senom i žitom je bela do krem boje i čvrsta na dodir. Žućkasta, mekana mast ukazuje na staru životinju ili loše čuvanje.</p><h4>3. Miris</h4><p>Dobro meso ima blag, skoro neutralan miris. Svaki kiselkast ili oštar miris je znak da meso nije sveže.</p><h4>4. Čvrstina</h4><p>Pritisnite meso prstom kroz foliju. Ako se brzo vrati u prvobitni oblik, sveže je. Ako ostane udubljenje ili pusti vodu, bilo je zamrzavano.</p><p>Najsigurniji način je ipak da kupujete tamo gde znate poreklo. Kod nas možete da pitate za svako grlo: odakle je, šta je jelo i kada je klano.</p>"},
+ {img:"p-but",m:"Saveti · 3 min",t:"Koji komad za koje jelo",s:"Od čorbe do steka: kratak vodič kroz delove junetine.",
+  b:"<p>Isti komad mesa može da bude savršen ili razočaravajući, zavisi samo od toga šta od njega pravite.</p><ul><li><strong>Rebra i vrat:</strong> čorbe, gulaš i sve što se dugo krčka.</li><li><strong>But:</strong> šnicle, pečenje u komadu, dinstanje.</li><li><strong>Plećka:</strong> paprikaš, punjenje, mleveno meso.</li><li><strong>Ramstek i antrikot:</strong> stekovi na jakoj vatri, kratko pečenje.</li><li><strong>Biftek:</strong> najmekši komad, za posebne prilike.</li></ul><p>Niste sigurni? Recite nam šta spremate i za koliko ljudi, a mi ćemo izabrati i iseći komad za vas.</p>"},
+ {img:"pusnica",m:"Tradicija · 3 min",t:"Zašto se dobro meso ne žuri",s:"Spor tov, zrenje i dimljenje: zašto strpljenje daje ukus.",
+  b:"<p>Industrijsko meso se pravi brzo. Životinje rastu brže, meso se prodaje odmah posle klanja, a suhomesnato se ubrzava hemijom. Mi radimo obrnuto.</p><h4>Spor tov</h4><p>Junad kod nas rastu duže i hrane se domaćom hranom. Meso je zato čvršće i ima puniji ukus.</p><h4>Zrenje</h4><p>Posle klanja meso odstoji u hladnjači. Tada postaje mekše i dobija dublji ukus.</p><h4>Pušnica</h4><p>Pršutu, sudžuk i kobasice sušimo i dimimo na tradicionalan način, bukovim drvetom, nedeljama. To se ne može ubrzati, i zato tako i ostaje.</p>"}
+];
+function cena(v){return v.toLocaleString("sr-Latn-RS").replace(/,/g,".")}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
-function kartica(p){var i=P.indexOf(p);return '<button type="button" class="kartica" data-i="'+i+'" data-k="'+p.k+'">'+(p.b?'<span class="bedz">'+esc(p.b)+'</span>':'')+
- '<span class="ph"><img src="img/'+p.img[0]+'.webp" alt="'+esc(p.n)+'" loading="lazy" width="800" height="600"></span><span class="tx"><span class="kat">'+esc(p.kn)+'</span><h3>'+esc(p.n)+'</h3><span class="cena">'+cena(p.c)+'<small>din/kg</small></span></span></button>'}
-document.getElementById("izdvojeno").innerHTML=P.filter(function(p){return p.top}).map(kartica).join("");
-var sve=document.getElementById("sve");sve.innerHTML=P.map(kartica).join("");
-var sb=document.getElementById("sve-btn"),sv=document.getElementById("svi");
-sb.textContent="Svi proizvodi ("+P.length+")";
-sb.addEventListener("click",function(){var o=sv.hidden;sv.hidden=!o;sb.setAttribute("aria-expanded",String(o));sb.textContent=o?"Sakrij listu":"Svi proizvodi ("+P.length+")";if(o)sv.scrollIntoView({behavior:"smooth",block:"start"})});
-document.querySelectorAll(".chip").forEach(function(ch){ch.addEventListener("click",function(){var k=ch.getAttribute("data-k");
- document.querySelectorAll(".chip").forEach(function(c){c.setAttribute("aria-pressed",String(c===ch))});
- sve.querySelectorAll(".kartica").forEach(function(c){c.hidden=!(k==="sve"||c.getAttribute("data-k")===k)})})});
-function otvori(d){if(d.showModal)d.showModal();else d.setAttribute("open","")}
-function zatvori(d){if(d.close)d.close();else d.removeAttribute("open")}
-document.querySelectorAll("dialog").forEach(function(d){d.addEventListener("click",function(e){if(e.target===d||e.target.closest("[data-x]"))zatvori(d)})});
-var dP=document.getElementById("dlg-p"),dPt=document.getElementById("dlg-p-telo");
-document.querySelectorAll(".mreza").forEach(function(m){m.addEventListener("click",function(e){var c=e.target.closest(".kartica");if(!c)return;var p=P[+c.getAttribute("data-i")];
- var msg=encodeURIComponent("Zdravo, zanima me "+p.n+".");
- dPt.innerHTML='<div class="det"><div class="gal"><div class="traka">'+p.img.map(function(s,j){return '<img src="img/'+s+'.webp" alt="'+esc(p.n)+' '+(j+1)+'">'}).join("")+'</div>'+
-  (p.img.length>1?'<div class="tacke">'+p.img.map(function(s,j){return '<button type="button" aria-label="Slika '+(j+1)+'" data-j="'+j+'"'+(j?'':' aria-current="true"')+'></button>'}).join("")+'</div>':'')+'</div>'+
-  '<div class="info"><span class="kat">'+esc(p.kn)+'</span><h3>'+esc(p.n)+'</h3><span class="cena">'+cena(p.c)+' <small>din/kg</small></span><p>'+esc(p.s)+' Sopstveni tov, sopstvena klanica.</p>'+
-  '<div class="btns"><a class="btn btn--red" href="tel:+'+RAW+'"><svg aria-hidden="true"><use href="#i-tel"/></svg>Pozovi</a><a class="btn" href="https://wa.me/'+RAW+'?text='+msg+'" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-msg"/></svg>WhatsApp</a><a class="btn" href="viber://chat?number=%2B'+RAW+'"><svg aria-hidden="true"><use href="#i-msg"/></svg>Viber</a></div><p class="tel">Telefon: '+TEL+'</p></div></div>';
- otvori(dP);var tr=dP.querySelector(".traka"),dots=dP.querySelectorAll(".tacke button");
- dots.forEach(function(b){b.addEventListener("click",function(){tr.scrollTo({left:tr.clientWidth*+b.getAttribute("data-j"),behavior:"smooth"})})});
- tr.addEventListener("scroll",function(){var j=Math.round(tr.scrollLeft/Math.max(1,tr.clientWidth));dots.forEach(function(b,i){b.setAttribute("aria-current",String(i===j))})},{passive:true});
-})});
-var zid=document.getElementById("zid"),dG=document.getElementById("dlg-g");
-zid.innerHTML=G.map(function(g,i){return '<button type="button" class="g'+(i+1)+'" data-s="'+g[0]+'" aria-label="'+esc(g[1])+'"><img src="img/'+g[0]+'.webp" alt="'+esc(g[1])+'" loading="lazy"></button>'}).join("");
-zid.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;var im=document.getElementById("lb-img");im.src="img/"+b.getAttribute("data-s")+".webp";im.alt=b.getAttribute("aria-label");otvori(dG)});
-var meni=document.getElementById("meni");meni.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){meni.open=false})});
-fetch("img/krediti.json").then(function(r){return r.json()}).then(function(k){document.getElementById("krediti").innerHTML=k.map(function(c){return '<li><a href="'+esc(c.source)+'" target="_blank" rel="noopener">'+esc(c.title.replace(/^File:/,""))+'</a>, '+esc(c.artist||"nepoznat autor")+', '+esc(c.license||"")+'</li>'}).join("")+'<li>Bikovi: crtež napravljen po fotografiji „Head butting type fighting" (CC BY-SA 4.0).</li>'}).catch(function(){});
 
-/* ---------- hero: dust burst, then the name forms out of the dust ---------- */
-var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-var hero=document.querySelector(".hero"),cv=document.getElementById("prasina"),ctx=cv.getContext&&cv.getContext("2d"),ime=document.getElementById("ime");
-if(!ctx||reduce){return}
-document.documentElement.classList.add("anim");
-var raf=0,timers=[];
-function prikazi(){ime.classList.add("vidi")}
-function dims(){var r=hero.getBoundingClientRect(),d=Math.min(2,window.devicePixelRatio||1);cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d);ctx.setTransform(d,0,0,d,0,0);return r}
-function tacke(hr){
-  var r=ime.getBoundingClientRect(),cs=getComputedStyle(ime),w=Math.max(1,Math.ceil(r.width)),h=Math.max(1,Math.ceil(r.height));
-  var oc=document.createElement("canvas");oc.width=w;oc.height=h;var o=oc.getContext("2d");
-  o.font="900 "+cs.fontSize+" "+cs.fontFamily;o.textBaseline="middle";o.fillStyle="#fff";
-  var mw=o.measureText(ime.textContent).width||1;o.save();o.scale(w/mw,1);o.fillText(ime.textContent,0,h*.52);o.restore();
-  var data=o.getImageData(0,0,w,h).data,out=[],step=Math.max(3,Math.round(parseFloat(cs.fontSize)/26));
-  for(var y=0;y<h;y+=step)for(var x=0;x<w;x+=step){if(data[(y*w+x)*4+3]>128)out.push([r.left-hr.left+x,r.top-hr.top+y])}
-  return {pts:out,step:step};
-}
-function pokreni(){
-  cancelAnimationFrame(raf);timers.forEach(clearTimeout);timers=[];ime.classList.remove("vidi");
-  timers.push(setTimeout(function(){
-    var hr=dims(),st=document.querySelector(".stage").getBoundingClientRect();
-    var cx=st.left-hr.left+st.width/2,cy=st.top-hr.top+st.height*.62;
-    var T=tacke(hr),pts=T.pts,max=window.innerWidth<700?900:1800;
-    if(pts.length>max){var keep=[],k=pts.length/max;for(var i=0;i<max;i++)keep.push(pts[Math.floor(i*k)]);pts=keep}
-    var P2=pts.map(function(t){var a=Math.random()*Math.PI*2,s=2+Math.random()*9;return{x:cx+(Math.random()-.5)*30,y:cy+(Math.random()-.5)*20,vx:Math.cos(a)*s,vy:Math.sin(a)*s*.6-2,tx:t[0],ty:t[1],r:.8+Math.random()*1.5}});
-    var oblak=[];for(var j=0;j<46;j++){var a2=Math.PI*(1+Math.random());oblak.push({x:cx,y:cy,vx:Math.cos(a2)*(1+Math.random()*4)*(Math.random()<.5?-1:1),vy:Math.sin(a2)*1.6-0.6,r:20+Math.random()*50,m:110+Math.random()*80,l:0})}
-    var t0=performance.now();
-    (function tick(now){
-      var t=(now-t0)/1000,W=hr.width,H=hr.height;ctx.clearRect(0,0,W,H);
-      oblak.forEach(function(c){if(c.l>c.m)return;c.l++;c.x+=c.vx;c.y+=c.vy;c.vx*=.975;c.vy*=.975;var k=1-c.l/c.m,R=c.r*(1.8-k);
-        var g=ctx.createRadialGradient(c.x,c.y,0,c.x,c.y,R);g.addColorStop(0,"rgba(150,120,90,"+(.16*k)+")");g.addColorStop(1,"rgba(150,120,90,0)");ctx.fillStyle=g;ctx.beginPath();ctx.arc(c.x,c.y,R,0,7);ctx.fill()});
-      var e=Math.min(1,Math.max(0,(t-.35)/1.1)),ee=e<.5?4*e*e*e:1-Math.pow(-2*e+2,3)/2;
-      var fade=t>1.55?Math.max(0,1-(t-1.55)/.5):1;
-      ctx.fillStyle="rgba(232,214,190,"+(.9*fade)+")";
-      P2.forEach(function(p){if(t<.35){p.x+=p.vx;p.y+=p.vy;p.vx*=.93;p.vy=p.vy*.93+.08;p.sx=p.x;p.sy=p.y}
-        if(p.sx===undefined){p.sx=p.x;p.sy=p.y}
-        var x=t<.35?p.x:p.sx+(p.tx-p.sx)*ee,y=t<.35?p.y:p.sy+(p.ty-p.sy)*ee;ctx.beginPath();ctx.arc(x,y,p.r*(t>1.3?T.step/3.2:1),0,7);ctx.fill()});
-      if(t>1.4&&!ime.classList.contains("vidi"))prikazi();
-      if(t<2.6)raf=requestAnimationFrame(tick);else ctx.clearRect(0,0,W,H);
-    })(t0);
-  },1300));
-  timers.push(setTimeout(prikazi,4200));
-}
-(document.fonts&&document.fonts.ready?document.fonts.ready:Promise.resolve()).then(pokreni);
-document.getElementById("ponovi").addEventListener("click",function(){
-  var els=document.querySelectorAll(".bik,.potres,.hero h1 .m,.hero .slogan,.hero .cta");
-  els.forEach(function(el){el.style.animation="none"});void hero.offsetWidth;els.forEach(function(el){el.style.animation=""});pokreni();
+/* products */
+var mreza=document.getElementById("mreza");
+mreza.innerHTML=P.map(function(p,i){
+  return '<button type="button" class="kartica" data-i="'+i+'" data-k="'+p.k+'">'+
+   (p.b?'<span class="bedz'+(p.bR?' bedz--r':'')+'">'+esc(p.b)+'</span>':'')+
+   '<span class="ph"><img src="img/'+p.img[0]+'.webp" alt="'+esc(p.n)+'" loading="lazy" width="900" height="675"></span>'+
+   '<span class="tx"><span class="kat">'+esc(p.kn)+'</span><h3>'+esc(p.n)+'</h3><p>'+esc(p.s)+'</p>'+
+   '<span class="dno"><span class="cena">'+cena(p.c)+'<small>din/'+p.j+'</small></span><span class="vise">Detalji →</span></span></span></button>';
+}).join("");
+document.querySelectorAll(".chip").forEach(function(ch){
+  ch.addEventListener("click",function(){
+    var k=ch.getAttribute("data-k");
+    document.querySelectorAll(".chip").forEach(function(c){c.setAttribute("aria-pressed",String(c===ch))});
+    mreza.querySelectorAll(".kartica").forEach(function(c){c.hidden=!(k==="sve"||c.getAttribute("data-k")===k)});
+  });
 });
+function otvori(d){if(typeof d.showModal==="function"){d.showModal()}else{d.setAttribute("open","")} }
+function zatvori(d){if(typeof d.close==="function"){d.close()}else{d.removeAttribute("open")} }
+document.querySelectorAll("dialog").forEach(function(d){
+  d.addEventListener("click",function(e){if(e.target===d||e.target.closest("[data-zatvori]"))zatvori(d)});
+});
+var dP=document.getElementById("dlg-p"),dPt=document.getElementById("dlg-p-telo");
+mreza.addEventListener("click",function(e){
+  var c=e.target.closest(".kartica"); if(!c)return; var p=P[+c.getAttribute("data-i")];
+  var msg=encodeURIComponent("Zdravo, zanima me "+p.n+".");
+  dPt.innerHTML='<div class="det"><div class="gal"><div class="traka" id="traka">'+
+   p.img.map(function(s,j){return '<img src="img/'+s+'.webp" alt="'+esc(p.n)+' – fotografija '+(j+1)+'">'}).join("")+
+   '</div>'+(p.img.length>1?'<div class="tacke">'+p.img.map(function(s,j){return '<button type="button" aria-label="Fotografija '+(j+1)+'"'+(j?'':' aria-current="true"')+' data-j="'+j+'"></button>'}).join("")+'</div>':'')+'</div>'+
+   '<div class="info"><span class="kat">'+esc(p.kn)+'</span><h3>'+esc(p.n)+'</h3><span class="cena">'+cena(p.c)+' <small>din/'+p.j+'</small></span><p class="opis">'+esc(p.o)+'</p>'+
+   '<dl><dt>Sastav</dt><dd>'+esc(p.sas)+'</dd><dt>Poreklo</dt><dd>Sopstveni tov, sopstvena klanica</dd><dt>Čuvanje</dt><dd>'+esc(p.cu)+'</dd><dt>Rok</dt><dd>'+esc(p.rok)+'</dd><dt>Priprema</dt><dd>'+esc(p.pri)+'</dd></dl>'+
+   '<div class="narudzba"><b>Naručite za preuzimanje</b><p>Pozovite ili pošaljite poruku: '+TEL+'</p><div class="btns">'+
+   '<a class="btn btn--red" href="tel:+'+TELRAW+'"><svg aria-hidden="true"><use href="#i-tel"/></svg>Pozovi</a>'+
+   '<a class="btn" href="https://wa.me/'+TELRAW+'?text='+msg+'" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-msg"/></svg>WhatsApp</a>'+
+   '<a class="btn" href="viber://chat?number=%2B'+TELRAW+'"><svg aria-hidden="true"><use href="#i-msg"/></svg>Viber</a></div></div></div></div>';
+  otvori(dP);
+  var tr=document.getElementById("traka"),dots=dP.querySelectorAll(".tacke button");
+  dots.forEach(function(b){b.addEventListener("click",function(){tr.scrollTo({left:tr.clientWidth*(+b.getAttribute("data-j")),behavior:"smooth"})})});
+  tr.addEventListener("scroll",function(){var j=Math.round(tr.scrollLeft/Math.max(1,tr.clientWidth));dots.forEach(function(b,i){b.setAttribute("aria-current",String(i===j))})},{passive:true});
+});
+
+/* gallery */
+var zid=document.getElementById("zid"),dG=document.getElementById("dlg-g");
+zid.innerHTML=G.map(function(g){return '<button type="button" class="g'+g[2]+'" data-s="'+g[0]+'" data-t="'+esc(g[1])+'"><img src="img/'+g[0]+'.webp" alt="'+esc(g[1])+'" loading="lazy"><span>'+esc(g[1])+'</span></button>'}).join("");
+zid.addEventListener("click",function(e){var b=e.target.closest("button");if(!b)return;
+  var im=document.getElementById("lb-img");im.src="img/"+b.getAttribute("data-s")+".webp";im.alt=b.getAttribute("data-t");
+  document.getElementById("lb-cap").textContent=b.getAttribute("data-t");otvori(dG)});
+
+/* blog */
+var cl=document.getElementById("clanci"),dA=document.getElementById("dlg-a"),dAt=document.getElementById("dlg-a-telo");
+cl.innerHTML=A.map(function(a,i){return '<button type="button" class="clanak" data-i="'+i+'"><span class="ph"><img src="img/'+a.img+'.webp" alt="" loading="lazy"></span><span class="meta">'+esc(a.m)+'</span><h3>'+esc(a.t)+'</h3><p>'+esc(a.s)+'</p><span class="vise">Pročitaj →</span></button>'}).join("");
+cl.addEventListener("click",function(e){var b=e.target.closest(".clanak");if(!b)return;var a=A[+b.getAttribute("data-i")];
+  dAt.innerHTML='<article class="art"><img class="hero-img" src="img/'+a.img+'.webp" alt=""><span class="meta">'+esc(a.m)+'</span><h3>'+esc(a.t)+'</h3>'+a.b+'</article>';otvori(dA);dA.scrollTop=0});
+
+/* credits */
+fetch("img/krediti.json").then(function(r){return r.json()}).then(function(k){
+  document.getElementById("krediti").innerHTML=k.map(function(c){return '<li>'+esc(c.file)+': <a href="'+esc(c.source)+'" target="_blank" rel="noopener">'+esc(c.title.replace(/^File:/,""))+'</a>, '+esc(c.artist||"nepoznat autor")+', '+esc(c.license||"")+'</li>'}).join("")+'<li>Privremene fotografije sa Wikimedia Commons, menjaju se fotografijama mesare.</li>';
+}).catch(function(){});
+
+/* hero: dust burst on impact */
+var cv=document.getElementById("prasina"),ctx=cv.getContext&&cv.getContext("2d"),parts=[],raf=0;
+var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function size(){var r=cv.getBoundingClientRect(),d=Math.min(2,window.devicePixelRatio||1);cv.width=Math.round(r.width*d);cv.height=Math.round(r.height*d);if(ctx)ctx.setTransform(d,0,0,d,0,0)}
+function burst(){
+  if(!ctx||reduce)return; size(); parts=[];
+  var r=cv.getBoundingClientRect(),cx=r.width/2,cy=r.height*.62;
+  for(var i=0;i<140;i++){var a=Math.PI*(1+Math.random()),s=1.5+Math.random()*6.5,big=Math.random()<.35;
+    parts.push({x:cx+(Math.random()-.5)*40,y:cy+(Math.random()-.5)*30,vx:Math.cos(a)*s*(Math.random()<.5?-1:1),vy:Math.sin(a)*s*.55-1,r:big?8+Math.random()*26:1+Math.random()*2.4,l:0,m:big?70+Math.random()*60:40+Math.random()*40,big:big});}
+  var t0=performance.now();cancelAnimationFrame(raf);
+  (function tick(){ctx.clearRect(0,0,r.width,r.height);var alive=0;
+    parts.forEach(function(p){if(p.l>p.m)return;alive++;p.l++;p.x+=p.vx;p.y+=p.vy;p.vx*=.96;p.vy=p.vy*.96+(p.big?-.02:.12);var k=1-p.l/p.m;
+      if(p.big){var g=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,p.r*(1.6-k*.6));g.addColorStop(0,"rgba(150,118,86,"+(.22*k)+")");g.addColorStop(1,"rgba(150,118,86,0)");ctx.fillStyle=g;ctx.beginPath();ctx.arc(p.x,p.y,p.r*(1.6-k*.6),0,7);ctx.fill()}
+      else{ctx.fillStyle="rgba(205,170,130,"+(.85*k)+")";ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,7);ctx.fill()}});
+    if(alive)raf=requestAnimationFrame(tick);})();
+}
+var udarT=setTimeout(burst,1300);
+document.getElementById("ponovi").addEventListener("click",function(){
+  var els=document.querySelectorAll(".bik,.hero .potres,.hero h1,.hero .slogan,.hero .sub,.hero .cta,.hero .bljesak");
+  els.forEach(function(el){el.style.animation="none"});void document.body.offsetWidth;
+  els.forEach(function(el){el.style.animation=""});clearTimeout(udarT);udarT=setTimeout(burst,1300);
+});
+window.addEventListener("resize",function(){if(ctx)size()});
 })();
 </script>
+
 </body>
 </html>
